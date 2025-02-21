@@ -10,93 +10,236 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #eeeeee;
+    background-image: url(./images/tlo.png);
+    background-size: cover;
 }
 
 /* Navbar */
-
-
-
-nav {
+.main-bar{
+    width: 100%;
     display: flex;
-    padding: 10px 20px 20px 10px; 
-    flex-wrap: wrap;
-    width: 100%;    
-    height: 145px;
-    box-shadow: 5px 10px 8px 10px #bebebe;
+    background-color: rgba(255, 255, 255, 0.075); /* Semi-transparent white */
+    backdrop-filter: blur(20px);
+    height: auto;
+    box-shadow: 5px 10px 8px 10px #00000028;
     border-radius: 0 0 20px 20px;
+    z-index: 1000; /* Ensure it's above other elements */ 
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
 }
-
+nav {
+    margin-left: 10px;
+    width: 93%;
+    display: flex; 
+    flex-wrap: wrap;
+}
 
 nav ul {
     list-style-type: none;
     margin: auto;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 30px; 
-    display: inline;
+    margin: 0 30px 10px 0;
+    background-color: rgba(0, 0, 0, 0.397);
+    border-radius: 10px; 
+    transition: 0.35s ease;
+    padding: 10px 0; 
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
     text-decoration: none; 
     font-size: 25px; 
-    padding: 10px 20px;
-    border-radius: 10px; 
-    transition: 0.35s ease; 
+    padding: 15px 30px;
+    font-weight: bold;
 }
 
-nav ul li a:hover{
-    background-color: rgba(163, 255, 127, 0.705);
+nav ul li:hover {
+    background-color: rgb(163, 255, 127);
+    color: black;
+}
+nav ul li:hover a{
+    color: black;
+}
+
+.clicked{
+    background-color: rgb(163, 255, 127);
+}
+.clicked a{
+    color: black;
 }
 
 /* Main Icon */
 .main_icon {
-    margin: 10px ;
-    max-height: 200px;
-    margin: 10px;  
-    position: absolute;
+    width: 7%;
+    z-index: 1100;
     cursor: pointer;
 }
 
 .main_icon img {
-    width: 125px;
+    width: 8vw;
     height: auto;
 }
 
-/*info
-.info-container{
-    border: solid red 10px;
-    width: auto;
-    padding: 50px;
-    width: 800px;
-    max-width: 1000px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
+/*info*/
+
+/* Kontener info */
+.info-container {
+    display: flex;              
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    max-width: 60vw;          
+    height: 100vh;
+    overflow: hidden;
+    margin: 10px 0 0 0;
+    padding: 0;
+    bottom: 0;
 }
 
-
-.info{
-
+.important{
+    color: red;
 }
 
+/* Kontener obrazu */
+.info-image {
+    position: relative;  /* Wymaga relatywnego pozycjonowania, aby div info mógł być pozycjonowany wewnątrz */
+    width: 100%;         /* Obraz zajmuje całą szerokość kontenera */
+    height: auto;        /* Zachowanie proporcji obrazu */
+    max-width: 100vw;    /* Ustawienie maksymalnej szerokości obrazu */
+}
+
+/* Ustawienia obrazu */
+.info-image img {
+    opacity: 0.8;        /* Ustawienie przezroczystości */
+    width: 100%;         /* Obraz rozciąga się na całą szerokość */
+    height: auto;        /* Utrzymywanie proporcji */
+    max-width: 100%;     /* Ustawienie maksymalnej szerokości obrazu */
+}
+
+/* Pozycjonowanie .info */
+.info {
+    position: absolute;   /* Pozycjonowanie absolutne wewnątrz .info-image */
+    top: 50%;             /* Ustawienie .info na środku obrazu w pionie */
+    left: 0;
+    margin-left: 10%;            /* Ustawienie .info na środku obrazu w poziomie */
+    transform: translate(0, -50%); /* Dokładne wyśrodkowanie .info */
+}
 .info h1{
-    color: red;
-    font-size: 60px;
+    color: white;         /* Kolor tekstu */
+    font-weight: bolder;
+    font-size: 100px;
 }
-
+h3{
+    color: rgb(163, 255, 127);
+    font-size: 50px;
+    font-weight: bold;
+}
 .info p{
-    color: red;
-    font-size: 20px;
+    font-size: 30px;
+    color: white;
 }
 
-.info span{
-    text-decoration: underline;
+
+
+/*media for big*/
+@media (max-width: 1500px) {
+    .info-container {
+        max-width: 90vw;        /* Increase max-width to 90% of the viewport */
+    }
+
+    .info-image img {
+        max-width: 100vw;        /* Ensure the image resizes to container */
+        width: 100%;            /* Adjust the image width to fit within the container */
+    }
+
+    .info h1{
+        font-size: 60px;
+    }
+    .info h3{
+        font-size: 40px;
+    }
+    .info p{
+        font-size: 30px;
+    }
+    
+    .content h1{
+        font-size: 30px;
+    }
+    .main-bar{
+        width: 100vw;
+       }
 }
-*/
+
+/* Media Query for small screens */
+@media (max-width: 800px) {
+    .info-container {
+        max-width: 90vw;        /* Increase max-width to 90% of the viewport */
+    }
+
+    .info-image img {
+        max-width: 100vw;        /* Ensure the image resizes to container */
+        width: 100%;            /* Adjust the image width to fit within the container */
+    }
+
+    .info h1{
+        font-size: 60px;
+    }
+    .info h3{
+        font-size: 40px;
+    }
+    .info p{
+        font-size: 30px;
+    }
+
+    .content h1{
+        font-size: 60px;
+    }
+    .main-bar{
+        width: 100vw;
+       }
+}
+
+@media (max-width: 500px) {
+    nav{
+        width: 100%;
+    }
+    .info-container {
+        max-width: 100vw;       /* Use full width of the viewport */
+    }
+
+    .info-image img {
+        max-width: 100vw;        /* Ensure the image fits the container */
+        width: 100%; 
+                   /* Resize the image when the container shrinks */
+    }
+    .info h1{
+        font-size: 50px;
+    }
+    .info h3{
+        font-size: 30px;
+    }
+    .info p{
+        font-size: 20px;
+    }
+    .content h1{
+        font-size: 30px;
+    }
+    .main-content{
+        padding-top: 40vh;
+        width: 70vw;
+    }
+    .main-bar{
+        width: 100vw;
+       }
+}
 

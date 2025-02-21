@@ -10,6 +10,7 @@
     <title>Jak zagrać? | ttc.ovh</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./kopa.css">
+    <link rel="stylesheet" href="./game.css">
 </head>
 <body>
     <div class="main-bar">
@@ -19,7 +20,7 @@
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./game.html" style="background-color: rgba(163, 255, 127, 0.705);">Jak zagrać?</a></li>
+                <li class="clicked"><a href="#" >Jak zagrać?</a></li>
                 <li><a href="./dzialki.html">Działki</a></li>
                 <li ><a href="./support.html">Wsparcie</a></li>
                 <li><a href="./regulamin.html" >Regulamin</a></li>
@@ -28,6 +29,43 @@
                 <li title="mapa serwera"><a href="https://mapa.ttc.ovh/" target="_blank"><i class="fa-solid fa-map-location-dot" ></i></a></li>
             </ul>
         </nav>
+    </div>
+    <div class="main-content">
+        <div class="content">
+            <h1>Jak Zagrać?</h1>
+        </div>
+        <div class="sub-content">
+            <p>Możecie grać na tym przecudownym serwerze <span class="sub-important">Imperatora Wszechmajstra Hypsia</span> na 
+                wersji minecraft premium jak i na non-premium. </p>
+            <p class="sub-important">IP serwera: ttc.ovh</p>
+            <p class="sub-important">Wersja: 1.21</p>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./images/min-prem.jpg">
+                </div>
+                <div class="card-content">
+                    <h1>Minecraft <br> Premium</h1>
+                    <p>Na serwerze zagrasz na wersji minecraft premium. Nie masz premium? To nie wiem <span style="text-decoration: underline 2px solid; text-decoration-color: rgb(163, 255, 127);">kup premium?</span></p>
+                </div>
+                <button><a href="https://www.minecraft.net/pl-pl/store/minecraft-java-bedrock-edition-pc?tabs=%7B%22details%22%3A0%7D" target="_blank">Kup Premium (130zł)</a></button>
+
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./images/min-free.png">
+                </div>
+                <div class="card-content">
+                    <h1>Minecraft <br> Non-Premium</h1>
+                    <p>Na serwerze zagrasz także na non premium launcherach! Tlauncher jest najpopularniejszy.</p>
+                </div>
+                <button><a href="https://tlauncher.org/en/" target="_blank"> Zainstaluj TLauncher</a></button>
+
+            </div>
+        </div>
     </div>
 </body>
 </html>
