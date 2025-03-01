@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.imperia-button:hover{
+    background: linear-gradient(to right, black 50%, white 50%);
+}
+/*info USUN POZNIEJ*/
+/* Wyśrodkowanie zdjęcia */
+.image-imperia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.image-imperia img {
+    max-width: 800px;
+    height: auto;
+}
+
+.info-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    background-color: red;
+    border-radius:20px;
+    padding: 15px 30px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+/*koniec*/
+.main-bar{
+    width: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.075); /* Semi-transparent white */
+    backdrop-filter: blur(20px);
+    height: auto;
+    box-shadow: 5px 10px 8px 10px #00000028;
+    border-radius: 0 0 20px 20px;
+    z-index: 1000; /* Ensure it's above other elements */ 
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+}
+nav {
+    margin-left: 10px;
+    width: 100%;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

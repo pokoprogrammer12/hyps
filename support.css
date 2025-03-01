@@ -1,0 +1,27 @@
+@media (max-width: 1500px) {
+    .main-bar{
+        width: 100%;
+       }
+}
+
+@media (max-width: 500px) {
+    .main-bar{
+     width: 100%;
+     position: relative;
+     margin-bottom: 0;
+     }
+    body{
+        height: 120vh;
+    }
+ }
+ 
+ @media (max-width: 800px) {
+     .main-bar{
+      width: 100%;
+      position: relative;
+      margin-bottom: 0;
+      }
+      body{
+        height: 140vh;
+      }
+  }
