@@ -4,6 +4,9 @@ body{
     height: 100vh;
     padding-bottom: 50px;
 }
+nav {
+    margin-left: 10px;
+}
 
 .main-info{
     display: flex;
@@ -61,6 +64,7 @@ body{
     .main-bar{
         width: 100%;
        }
+       
        .main-info{
         right: 50%;
         transform: translate(50%,50%);
@@ -112,9 +116,6 @@ body{
      position: relative;
      margin-bottom: 0;
      }
-    body{
-        height: 120vh;
-    }
  }
  
  @media (max-width: 800px) {
@@ -137,8 +138,5 @@ body{
       }
       .info-content ul li{
         font-size: 20px;
-      }
-      body{
-        height: 140vh;
       }
   }

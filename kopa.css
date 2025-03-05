@@ -13,6 +13,7 @@ body {
     background-color: #eeeeee;
     background-image: url(./images/tlo.png);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Navbar */
@@ -79,7 +80,7 @@ nav ul li:hover a{
 
 /* Main Icon */
 .main_icon {
-    width: 7%;
+    width: 7.3%;
     z-index: 1100;
     cursor: pointer;
 }
@@ -129,10 +130,10 @@ nav ul li:hover a{
 /* Pozycjonowanie .info */
 .info {
     position: absolute;   /* Pozycjonowanie absolutne wewnątrz .info-image */
-    top: 50%;             /* Ustawienie .info na środku obrazu w pionie */
+    top: 60%;             /* Ustawienie .info na środku obrazu w pionie */
     left: 0;
     margin-left: 10%;            /* Ustawienie .info na środku obrazu w poziomie */
-    transform: translate(0, -50%); /* Dokładne wyśrodkowanie .info */
+    transform: translate(0, -60%); /* Dokładne wyśrodkowanie .info */
 }
 .info h1{
     color: white;         /* Kolor tekstu */
@@ -153,31 +154,31 @@ h3{
 
 /*media for big*/
 @media (max-width: 1500px) {
-    .info-container {
-        max-width: 60vw;        /* Increase max-width to 90% of the viewport */
-    }
+        .info-container {
+            max-width: 60vw;        /* Increase max-width to 90% of the viewport */
+        }
 
-    .info-image img {
-        max-width: 100vw;        /* Ensure the image resizes to container */
-        width: 100%;            /* Adjust the image width to fit within the container */
-    }
+        .info-image img {
+            max-width: 100vw;        /* Ensure the image resizes to container */
+            width: 100%;            /* Adjust the image width to fit within the container */
+        }
 
-    .info h1{
-        font-size: 60px;
-    }
-    .info h3{
-        font-size: 40px;
-    }
-    .info p{
-        font-size: 30px;
-    }
-    
-    .content h1{
-        font-size: 30px;
-    }
-    .main-bar{
-        width: 100%;
-       }
+        .info h1{
+            font-size: 60px;
+        }
+        .info h3{
+            font-size: 40px;
+        }
+        .info p{
+            font-size: 30px;
+        }
+        
+        .content h1{
+            font-size: 30px;
+        }
+        .main-bar{
+            width: 100%;
+        }
 }
 
 /* Media Query for small screens */
@@ -272,3 +273,30 @@ h3{
        }
 }
 
+@media (max-height:500px){
+    .info-container {
+        max-width: 50vw;        /* Increase max-width to 90% of the viewport */
+    }
+
+    .info-image img {
+        max-width: 80vw;        /* Ensure the image resizes to container */
+        width: 100%;            /* Adjust the image width to fit within the container */
+    }
+
+    .info h1{
+        font-size: 40px;
+    }
+    .info h3{
+        font-size: 30px;
+    }
+    .info p{
+        font-size: 15px;
+    }
+    
+    .content h1{
+        font-size: 20px;
+    }
+    .main-bar{
+        width: 100%;
+       }
+}

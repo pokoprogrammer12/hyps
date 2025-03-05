@@ -129,8 +129,6 @@ button:hover a{
     margin-top: -15vh
    }
    .main-bar{
-    width: 100vw;
-    position: relative;
     margin-bottom: 0;
     }
     .card-container{
@@ -174,4 +172,10 @@ button:hover a{
         width: 90vw;
         text-align: center;
      }
+ }
+ @media (max-height: 500px){
+    .main-content{
+        margin-top: 30vh;
+        border-radius: 40px;
+    }
  }
